@@ -11,6 +11,9 @@ body {
     background-attachment: fixed;
 }
 
+a {
+    padding: 1rem;
+}
 /* bevisst: semantikk-brudd – alt er div-suppe */
 .global-header { 
     height: 80px; 
