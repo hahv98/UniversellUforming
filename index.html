@@ -16,7 +16,7 @@
 <body>
   <header class="global-header">
     <span class="logo" aria-hidden="true"></span> <!-- bevisst: viktig info kun i bilde uten tekstalternativ -->
-    <span class="site-title">Min side</span>
+    <span class="site-title">UU Experientell</span>
   </header>
 
   <nav class="navmenu"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
@@ -38,26 +38,26 @@
   </nav>
   
   <section>
-    <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
+    <h2><a href="#">Les mer her for viktig informasjon ang. eksamen 2025.</a></h2>
   </section>
 
   <aside class="sidebar">
     <section class="card" id="seksjon">
-      <h2>Nyheter</h2> <!-- bevisst: hopper over h1/h2/h3 -->
-      <p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
-      <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
-      </p>
-      <p class="status-ok">Tilgjengelig</p>
-      <p class="status-bad">Utilgjengelig</p>
+      <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
+      <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt="Eksempelbilde"> <!-- bevisst: tom alt på meningsbærende bilde -->
+        <p><a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.</p>
+        <p class="status-ok">Tilgjengelig</p>
+        <p class="status-bad">Utilgjengelig</p>
+      </article>
     </section>
 
     <section class="card">
       <h2>Språk</h2>
-      <p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
-      </p>
+      <ul>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no" title="Norsk Bokmål"></li> <!-- bevisst: alt «no» er ikke beskrivende -->
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en" title="English(UK)"></li>
+      </ul>
     </section>
   </aside>
 
@@ -65,13 +65,13 @@
     <h1>VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)</h1>
 
     <article class="card shout">
-      <h2 class="narrow">
+      <h3 class="narrow">
         Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.
-      </h2>
+      </h3>
     </article>
 
     <article class="card form">
-      <h2>Kontakt oss</h2>
+      <h3>Kontakt oss</h3>
       <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
       <form action="">
         <label>
@@ -107,36 +107,53 @@
     </article>
 
     <article class="card weird-order">
-      <h2>Mer innhold</h2>
-      <p>
-        <a href="#" tabindex="3">Les mer</a> |
-        <a href="#" tabindex="1">Klikk her</a> |
-        <a href="#" tabindex="2">Trykk her</a>
-      </p>
-      <p>
-        <span class="btn" tabindex="4">Primær handling</span>
-      </p>
+      <h3>Mer innhold</h3>
+      <ol>
+        <li><a href="#">Info - Eksamensoppgave 1</a></li>
+        <li><a href="#">Info - Eksamensoppgave 2</a></li>
+        <li><a href="#">Info - Eksamensoppgave 3 - kommer snart</a></li>
+      </ol>
+      <button>Start eksamen</button>
     </article>
 
     <section>
-      <div class="card">
+      <article>
         <h3>Tabell uten overskrifter</h3>
         <table>
-          <tr><td>1</td><td>2</td><td>3</td></tr>
-          <tr><td>4</td><td>5</td><td>6</td></tr>
-          <tr><td>7</td><td>8</td><td>9</td></tr>
+          <tbody>
+            <tr>
+              <th>Kolonne 1</th>
+              <th>Kolonne 2</th>
+              <th>Kolonne 3</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>4</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>5</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>6</td>
+              <td>9</td>
+            </tr>
+          </tbody>
         </table>
-      </div>
+      </article>
 
-      <div class="card">
+      <article>
         <h3>Masse lenker med samme tekst</h3>
         <ul>
-          <li><a href="#">Les mer</a></li>
-          <li><a href="#">Les mer</a></li>
-          <li><a href="#">Les mer</a></li>
-          <li><a href="#">Les mer</a></li>
+          <li><a href="#">Oppgave - UU</a></li>
+          <li><a href="#">Oppgave - SEO</a></li>
+          <li><a href="#">Oppgave - Semantisk HTML</a></li>
+          <li><a href="#">Oppgave - CSS, Grid & Flex</a></li>
         </ul>
-      </div>
+      </article>
     </section>
   </main>
 
