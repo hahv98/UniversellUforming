@@ -99,8 +99,8 @@ a { color: #bdbdbd; }
 .tiny-link { font-size: 9px; padding: 2px; border:1px solid transparent; }
 
 /* bevisst: dupliserte id-er */
-#sekjson { padding: 8px; }
-#sekjson { margin-top: 8px; }
+#seksjon { padding: 8px; }
+#seksjon { margin-top: 8px; }
 
 /* bevisst: hardfixet høyde, tekst kan bli avkuttet ved zoom */
 .card { height: 140px; overflow: hidden; background: rgba(255,255,255,0.5); border: 1px solid #e3e3e3; padding: 10px; margin-bottom: 10px; }
@@ -126,6 +126,15 @@ a { color: #bdbdbd; }
 
 /* bevisst: alt for smal linjelengde og justified */
 .narrow { width: 180px; text-align: justify; }
+
+footer {
+    text-align: center; 
+    padding: 10px; 
+    background: rgba(255,255,255,0.6);
+}
+footer p {
+    font-size:10px; color:#bfbfbf;
+}
 
 /* print-uvennlig */
 @media print { body { background: #000; color:#000; } }

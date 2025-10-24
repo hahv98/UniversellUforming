@@ -19,7 +19,7 @@
     <span class="site-title">Min side</span>
   </header>
 
-  <nav class="nav" role="navigation"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
+  <nav class="navmenu"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
     <ul>
       <li><a href="#">Hjem</a></li>
       <li><a href="#">Om oss</a></li>
@@ -38,12 +38,12 @@
   </nav>
   
   <section>
-    <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+    <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
   </section>
 
   <aside class="sidebar">
-    <section class="card" id="sekjson">
-      <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
+    <section class="card" id="seksjon">
+      <h2>Nyheter</h2> <!-- bevisst: hopper over h1/h2/h3 -->
       <p>
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
       <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
@@ -53,7 +53,7 @@
     </section>
 
     <section class="card">
-      <h4>Språk</h4>
+      <h2>Språk</h2>
       <p>
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
@@ -65,30 +65,49 @@
     <h1>VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)</h1>
 
     <article class="card shout">
-      <div class="narrow">
+      <h2 class="narrow">
         Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.
-      </div>
+      </h2>
     </article>
 
     <article class="card form">
-      <h4>Kontakt oss</h4>
+      <h2>Kontakt oss</h2>
       <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-      <input type="text" id="navn" placeholder="Navn*">
-      <input type="email" id="navn" placeholder="E-post*"> <!-- bevisst: duplisert id -->
-      <input type="tel" placeholder="Telefon">
-      <select>
-        <option>Velg tema*</option>
-        <option>Bestilling</option>
-        <option>Support</option>
-      </select>
-      <textarea rows="3" placeholder="Melding..."></textarea>
-      <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
-      <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-      <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
+      <form action="">
+        <label>
+          Navn: 
+          <input type="text" id="navn" placeholder="Ola Normann" required>  
+        </label>
+        <label>
+          E-post:
+          <input type="email" id="mail" placeholder="olanor@hiof.no" required> <!-- bevisst: duplisert id -->
+        </label>
+        <label>
+          Mobil:
+          <input type="tel" placeholder="123 45 678" required>
+        </label>
+
+        <label for="service">Tjeneste</label>
+        <select id="service">
+          <option>Velg tema*</option>
+          <option>Bestilling</option>
+          <option>Support</option>
+        </select>
+
+        <label>
+          Melding:
+          <textarea rows="3" placeholder="Din melding går her..."></textarea>
+        </label>
+        
+        <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
+        <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
+        <input type="submit" value="Send">
+        <!-- <button>Send</button> bevisst: span som knapp, positiv tabindex -->
+      </form>
     </article>
 
     <article class="card weird-order">
-      <h4>Mer innhold</h4>
+      <h2>Mer innhold</h2>
       <p>
         <a href="#" tabindex="3">Les mer</a> |
         <a href="#" tabindex="1">Klikk her</a> |
@@ -101,8 +120,8 @@
 
     <section>
       <div class="card">
-        <h4>Tabell uten overskrifter</h4>
-        <table border="1" width="100%">
+        <h3>Tabell uten overskrifter</h3>
+        <table>
           <tr><td>1</td><td>2</td><td>3</td></tr>
           <tr><td>4</td><td>5</td><td>6</td></tr>
           <tr><td>7</td><td>8</td><td>9</td></tr>
@@ -110,7 +129,7 @@
       </div>
 
       <div class="card">
-        <h4>Masse lenker med samme tekst</h4>
+        <h3>Masse lenker med samme tekst</h3>
         <ul>
           <li><a href="#">Les mer</a></li>
           <li><a href="#">Les mer</a></li>
@@ -121,12 +140,12 @@
     </section>
   </main>
 
-  <footer style="text-align:center; padding: 10px; background: rgba(255,255,255,0.6)">
+  <footer>
     <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-    <p style="font-size:10px; color:#bfbfbf">© 2025 ACME</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="Facebook">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="Twitter">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    <p>© 2025 ACME</p>
   </footer>
 </body>
 </html>
